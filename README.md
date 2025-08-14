@@ -49,9 +49,17 @@ The display uses the following pins:
 # 🔗 Resources
   Here you'll find a collection of useful links and videos related to the topic of AVR microcontrollers.  
 
+> [!TIP]
+> The resources are detailed in the sections below.  
+> To access any of them, simply click on the corresponding blue link.
+
 - [API Reference](./API_Reference.md)  
   ---  
   This section provides detailed descriptions of the functions in the `alcd.h` and `alcd.c` files for handling LCD operations on the ATmega328 microcontroller. These APIs allow you to initialize the LCD, control cursor and display settings, write characters and strings, define custom characters, and manage the backlight. The library is designed for 16x2 character displays and supports flexible pin mapping for easy hardware integration.
+
+- [AVR Microntroller](https://github.com/aKaReZa75/AVR)
+  ---  
+    This repository contains comprehensive resources for AVR microcontrollers, including hardware schematics, software libraries, and educational projects.
 
 
 ```plaintext
@@ -82,14 +90,7 @@ AVR, Alphanumeric LCD
     </td>
   </tr>
 </table>
-  
-> [!TIP]
-> The resources are detailed in the sections below.  
-> To access any of them, simply click on the corresponding blue link.
 
-- [AVR Microntroller](https://github.com/aKaReZa75/AVR)
-  ---  
-    This repository contains comprehensive resources for AVR microcontrollers, including hardware schematics, software libraries, and educational projects.
 
 # 💻 How to Use Git and GitHub
 To access the repository files and save them on your computer, there are two methods available:
