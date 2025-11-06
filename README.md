@@ -1,19 +1,26 @@
-# Alphanumeric Display with AVR
+# Alphanumeric LCD Display Library for AVR
 
-The alphanumeric display is a character-based LCD that can display up to 16 characters per row and 2 rows (for example 16x2).   
+A comprehensive and flexible library for controlling 16x2 alphanumeric LCD displays with HD44780-compatible controllers using AVR microcontrollers. This library supports both 4-bit and 8-bit parallel communication modes.
 
-The display can operate in two modes
-- **8-bit mode** (all 8 data pins used)
-- **4-bit mode** (only 4 data pins used)
+## Overview
 
-In 4-bit mode, only 4 data lines are used to transmit data, saving on pin usage compared to the 8-bit mode.    
-This document provides a comprehensive guide to using an alphanumeric LCD with the AVR microcontrollers in 4-bit parallel mode. The provided `alcd.h` library simplifies LCD control.  
+Alphanumeric LCD displays are character-based modules that can display text and custom characters. The most common configuration is 16x2 (16 characters per row, 2 rows), which this library is optimized for.
 
-The display uses the following pins:
-- RS (Register Select) for selecting data/command mode
-- EN (Enable) for latching data into the display
-- DB4 to DB7 for data transmission
-- BL (Backlight) control (optional)
+### Communication Modes
+
+The HD44780 LCD controller supports two parallel communication modes:
+
+#### **8-Bit Mode**
+- Uses all 8 data lines (DB0-DB7)
+- Faster data transmission (complete byte sent in one cycle)
+- Requires more GPIO pins (10 pins total: RS, EN, DB0-DB7)
+- Ideal for performance-critical applications with abundant GPIO
+
+#### **4-Bit Mode** 
+- Uses only 4 data lines (DB4-DB7)
+- Slower data transmission (byte sent in two cycles: high nibble, then low nibble)
+- Requires fewer GPIO pins (6 pins total: RS, EN, DB4-DB7)
+- Ideal for GPIO-limited projects while maintaining full functionality
 
 <table>
   <tr>
@@ -65,6 +72,42 @@ The display uses the following pins:
   </td>
   </tr>  
 </table>
+
+
+
+### Library Features
+
+✅ **Dual Mode Support**
+- Complete 4-bit mode implementation
+- Complete 8-bit mode implementation
+- Easy switching between modes (separate source files)
+
+✅ **Display Control**
+- Initialize and configure LCD
+- Clear display and control cursor position
+- Display text strings and individual characters
+- Control display, cursor, and blink states
+
+✅ **Custom Characters**
+- Create up to 8 custom 5×8 pixel characters
+- Store in CGRAM for repeated use
+- Perfect for icons, symbols, and special graphics
+
+✅ **Backlight Control**
+- Optional backlight ON/OFF control
+- Transistor-driven for proper current handling
+
+✅ **Flexible Pin Mapping**
+- Easy pin configuration via header file
+- Connect LCD to any available GPIO pins
+- No hardcoded pin assignments
+
+✅ **Robust Implementation**
+- Proper HD44780 initialization sequence
+- Accurate timing delays
+- Position tracking and auto-wrapping
+- Comprehensive error prevention
+
 
 # 🔗 Resources
   Here you'll find a collection of useful links and videos related to the topic of AVR microcontrollers.  
