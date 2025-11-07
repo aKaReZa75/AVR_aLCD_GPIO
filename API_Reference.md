@@ -1,20 +1,6 @@
 # aLCD Library - API Reference
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Communication Modes](#communication-modes)
-- [Hardware Pin Configuration](#hardware-pin-configuration)
-- [API Functions](#api-functions)
-- [Complete Examples](#complete-examples)
-- [Important Notes](#important-notes)
-
----
-
-## Introduction
-
 This library provides a complete driver for HD44780-compatible 16x2 alphanumeric LCD displays. It supports both 4-bit and 8-bit communication modes, offering flexibility for different hardware configurations and project requirements.
-
----
 
 ## Communication Modes
 
